@@ -1,5 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&subset=latin,cyrillic,latin-ext);
 
+body > main {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* borders still need improvement
+.row {
+  border: 1px solid #d3d3d3;
+}
+*/
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Playfair Display', serif;
   font-weight: 300;
@@ -18,11 +30,17 @@ a:hover {
   margin-top: 0px;
 }
 
-.navbar-brand {
+.navbar-brand.logo > img {
+  max-height: 64px;
+  max-width: 64px;
+  display: inline;
+}
+
+#nav-container {
   border-bottom: 1px solid #d3d3d3;
 }
 
-.navbar-brand.logo > h3 {
+.navbar-brand.logo > h3 > a {
   font-family: 'Playfair Display', serif;
 }
 
