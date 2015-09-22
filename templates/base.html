@@ -4,19 +4,20 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/duraluminum/styles/main.css"/>
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/styles/main.css"/>
-        <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
-        {% if FEED_RSS %}
-        <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
-        <script src="{{ SITEURL }}/theme/duraluminum/scripts/modernizr.js"></script>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/duraluminum/styles/main.css"/>
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/styles/main.css"/>
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css"/>
+      <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+      {% if FEED_RSS %}
+      <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+      {% endif %}
+      <script src="{{ SITEURL }}/theme/duraluminum/scripts/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -24,69 +25,69 @@
         <![endif]-->
 
 
-        <main>
-            <header>
-                <div class="main-logo">
-                    <img src="{{ SITEURL }}/theme/duraluminum/images/logo.png">
-                </div>
-                <nav class="navbar navbar-default" role="navigation">
-                    <div class="container-fluid" id="nav-container">
-                        <!-- Brand and toggle get grouped for better mobile display -->
+      <main>
+        <header>
+          <div class="main-logo">
+            <img src="{{ SITEURL }}/theme/duraluminum/images/logo.png">
+          </div>
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid" id="nav-container">
+              <!-- Brand and toggle get grouped for better mobile display -->
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#upper-navbar">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="upper-navbar">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="{{ SITEURL }}">HOME</a></li>
-                                {% if DISPLAY_PAGES_ON_MENU != False %}
-                                {% for p in PAGES %}
-                                    <li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title|upper }}</a></li>
-                                {% endfor %}
-                                {% endif %}
-                                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">ARCHIVES</a></li>
-                                {#{% for cat, null in categories %}
-                                    <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                                {% endfor %}#}
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                        <div class="collapse navbar-collapse" id="lower-navbar">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="https://facebook.com/cloudfleetio" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <!--li><a href="#"><i class="fa fa-google-plus"></i></a></li-->
-                                <li><a href="https://twitter.com/cloudfleetio" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
-                        <div class="navbar-brand logo">
-                            <h3><a href="https://cloudfleet.io/">CLOUD<wbr><span>FLEET</span></a></h3>
-                            <h3><small>Host your cloud services at home</small><h3>
-                        </div>
-                    </div><!-- /.container-fluid -->
-                </nav>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#upper-navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="upper-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{{ SITEURL }}">HOME</a></li>
+                  {% if DISPLAY_PAGES_ON_MENU != False %}
+                    {% for p in PAGES %}
+                      <li {% if p == page %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title|upper }}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                  <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL }}">ARCHIVES</a></li>
+                  {#{% for cat, null in categories %}
+                    <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                  {% endfor %}#}
+                </ul>
+              </div><!-- /.navbar-collapse -->
+              <div class="collapse navbar-collapse" id="lower-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="https://facebook.com/cloudfleetio" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <!--li><a href="#"><i class="fa fa-google-plus"></i></a></li-->
+                  <li><a href="https://twitter.com/cloudfleetio" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+              <div class="navbar-brand logo">
+                <h3><a href="https://cloudfleet.io/">CLOUD<wbr><span>FLEET</span></a></h3>
+                <h3><small>Host your cloud services at home</small><h3>
+              </div>
+            </div><!-- /.container-fluid -->
+          </nav>
 
-            </header>
-            {% block content %}
-            {% endblock %}
+        </header>
+        {% block content %}
+        {% endblock %}
 
-            <div class="row footer">
-                <div class="col-sm-12">
-                    <p>Made with ♥ and open source by the Cloudfleet team.</p>
-                    <p>
-                      Proudly powered by 
-                      <a href="http://alexis.notmyidea.org/pelican/">pelican</a>
-                      , which takes great advantages of 
-                      <a href="http://python.org">python</a>
-                      .
-                    </p>
-                </div>
-            </div>
-        </main>
+        <div class="row footer">
+          <div class="col-sm-12">
+            <p>Made with ♥ and open source by the Cloudfleet team.</p>
+            <p>
+              Proudly powered by 
+              <a href="http://alexis.notmyidea.org/pelican/">pelican</a>
+              , which takes great advantages of 
+              <a href="http://python.org">python</a>
+              .
+            </p>
+          </div>
+        </div>
+      </main>
 
 
         <script src="{{ SITEURL }}/theme/duraluminum/scripts/jquery.js"></script>
