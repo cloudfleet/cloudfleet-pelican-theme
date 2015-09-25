@@ -5,27 +5,27 @@
 {% for article in articles %}
     {% if loop.index == 1 %}
     <div class="row box">
-      <div class="col-xs-10">
+      <div class="col-xs-12">
         <h1>
-          <a 
-            href="{{ article.url }}" 
-            rel="bookmark" 
+          <a
+            href="{{ article.url }}"
+            rel="bookmark"
             title="Permalink to {{ article.title|striptags }}"
             >
             {{ article.title }}
           </a>
-        </h1> 
+        </h1>
         {% include 'twitter.html' %}
         <div class="entry-content">
         {% include 'article_infos.html' %}<!-- /.post-info -->
         {{ article.content }}
         </div>
       {% if loop.length  > 1 %}
-          
+
         </div><!-- /.entry-content -->
       </div>
       <div class="row airship split">
-        <div class="col-xs-10">
+        <div class="col-xs-12">
           <h2>Other articles</h2>
             <ul id="posts-list" class="hfeed">
         {% endif %}
