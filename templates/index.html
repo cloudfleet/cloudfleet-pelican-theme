@@ -5,7 +5,7 @@
 {% for article in articles %}
     {% if loop.index == 1 %}
     <div class="row box">
-      <div class="col-xs-12">
+      <div class="content col-xs-12">
         <h1>
           <a
             href="{{ article.url }}"
@@ -22,17 +22,13 @@
         </div>
       {% if loop.length  > 1 %}
 
-        </div><!-- /.entry-content -->
-      </div>
-      <div class="row airship split">
-        <div class="col-xs-12">
-          <h2>Other articles</h2>
+          <h2 class="separator">Other articles</h2>
             <ul id="posts-list" class="hfeed">
         {% endif %}
     {% else %}
         <li><article class="hentry">
                 <header>
-                        <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
                 </header>
 
                 <div class="entry-content">
