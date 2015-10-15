@@ -834,23 +834,27 @@ ul.navbar-xs li a:hover {
 .blog {
     background-image: url(../img/features-bkrnd.png);
     padding-top: 70px;
+    padding-bottom: 0;
 }
 
 .blog .content {
    background-color: white;
-   padding: 0;
+   padding-left: 20px;
+   padding-right: 20px;
    padding-top: 50px;
+   padding-bottom: 50px;
    border: dotted 1px #b0b0b0;
 }
 
 .blog h1 {
-  padding-left: 1em;
+  /*padding-left: 1em;*/
 }
 
 .blog h2 {
     padding: 10px;
     font-size: 20px;
     margin: 0 !important;
+    margin-top: 10px !important;
     position: relative;
     z-index: 998;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
@@ -858,6 +862,8 @@ ul.navbar-xs li a:hover {
 .blog h2.separator {
     background-color: #e26826;
     color: white;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
 }
 .blog p {
     background-color: white;

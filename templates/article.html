@@ -2,7 +2,7 @@
 {% block title %}{{ article.title|striptags }}{% endblock %}
 {% block content %}
 <div class="row box">
-  <div class="content col-xs-12">
+  <div class="content col-xs-12 col-md-7">
     <h1>
       <a
         href="{{ article.url }}"
@@ -17,23 +17,6 @@
     {% include 'article_infos.html' %}<!-- /.post-info -->
     {{ article.content }}
     </div><!-- /.entry-content -->
-  </div>
-</div>
-<div class="row cloud">
-  <div class="col-xs-11 col-xs-offset-1 ">
-    {% if DISQUS_SITENAME %}
-    <h2>Comments !</h2>
-    <div id="disqus_thread"></div>
-        <script type="text/javascript">
-           var disqus_identifier = "{{ article.url }}";
-           (function() {
-           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-           dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-        </script>
-    </div>
-    {% endif %}
   </div>
 </div>
 {% endblock %}
