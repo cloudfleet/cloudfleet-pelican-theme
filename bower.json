@@ -1,8 +1,0 @@
-{
-  "name": "cloudfleet-landing-page",
-  "private": true,
-  "dependencies": {
-    "duraluminum": "cloudfleet/duralumin#production"
-  },
-  "devDependencies": {}
-}
