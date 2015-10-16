@@ -4,25 +4,7 @@
 {% if articles %}
 {% for article in articles %}
     {% if loop.index == 1 %}
-    <div class="row box">
-      <div class="content col-xs-12 col-md-7">
-        <h1>
-          <a
-            href="{{ article.url }}"
-            rel="bookmark"
-            title="Permalink to {{ article.title|striptags }}"
-            >
-            {{ article.title }}
-          </a>
-        </h1>
-        {% include 'twitter.html' %}
-        <div class="entry-content">
-        {% include 'article_infos.html' %}<!-- /.post-info -->
-        {{ article.content }}
-        </div><!-- /.entry-content -->
-      </div>
-    </div>
-    {% else %}
+        {% include 'article_content.html' %}
     {% endif %}
 {% endfor %}
 {% endif %}
