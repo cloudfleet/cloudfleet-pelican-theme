@@ -14,6 +14,9 @@
     {% include 'article_infos.html' %}<!-- /.post-info -->
     {{ article.content }}
     </div><!-- /.entry-content -->
+    {% if article.status == 'draft' %}
+      {% include 'discourse.html'%}
+    {% endif %}
   </div>
   <div class="sidebar col-xs-12 col-md-3 col-md-offset-1">
     <h2 class="separator top">
