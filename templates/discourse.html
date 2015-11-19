@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
   DiscourseEmbed = { discourseUrl: 'https://discourse.cloudfleet.io/',
-                     discourseEmbedUrl: '{{ article.url }}' };
+                     discourseEmbedUrl: '{{SITE_URL}}/{{ article.url }}' };
 
   (function() {
     var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
