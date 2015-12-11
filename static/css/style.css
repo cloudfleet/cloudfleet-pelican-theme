@@ -857,6 +857,10 @@ ul.navbar-xs li a:hover {
     /*position: fixed;*/
 }
 
+.blog dt {
+    padding-top: 10px;
+}
+
 .blog h1 {
   /*padding-left: 1em;*/
 }
@@ -883,7 +887,7 @@ ul.navbar-xs li a:hover {
     background-color: white;
     color: #2f2f2f;
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
 }
 
