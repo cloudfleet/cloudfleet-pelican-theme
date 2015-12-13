@@ -35,6 +35,9 @@
               <nav id="nav-top">
                   <div class="container">
                       <ul class="social-top pull-right">
+                          {% if FEED_ALL_ATOM %}
+                          <li><a href="{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate"><i class="fa fa-rss"></i></a></li>
+                          {% endif %}
                           <li><a href="https://www.facebook.com/cloudfleetio" target="_blank"
                                  title="join cloudfleet faceboot"><i class="fa fa-facebook"></i></a></li>
                           <li><a href="https://twitter.com/cloudfleetio" target="_blank"
