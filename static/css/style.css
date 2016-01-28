@@ -144,7 +144,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-header img {
     display: inline;
     max-height: 64px;
-    margin-top: -7px;
+    /*margin-top: -7px;*/
 }
 .navbar-header .logo {
     font-weight: 400;
@@ -286,6 +286,7 @@ ul.social-top li a i {
 .navbar {
     margin: 0px 0 0;
     border: none;
+    min-height: 66px;
 }
 .navbar li.active a {
     color: #2f2f2f;
@@ -857,6 +858,19 @@ ul.navbar-xs li a:hover {
     /*position: fixed;*/
 }
 
+.blog img {
+    max-width: 90%;
+}
+
+.blog .img-description {
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+    font-size: 8pt;
+    padding-left: 10px;
+    color: #7D7D7D;
+}
+
 .blog dt {
     padding-top: 10px;
 }
@@ -974,7 +988,7 @@ ul.navbar-xs li a:hover {
 
 
     .navbar-header img {
-        width: 110px;
+        /*width: 110px;*/
     }
     .navbar li a {
         font-size: 11px;
